@@ -1,0 +1,3 @@
+/* Plugin-Bar */
+
+Prüft ob die erkannten Plugins der aktuellen Version entsprechen. Wenn nicht wird die Toolbar angezeigt und ein Link auf die Herstellerseite erscheint.
