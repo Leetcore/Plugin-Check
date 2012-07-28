@@ -689,14 +689,22 @@ if (os==1 | os==2 | os==3 )
 
 {
 
-// Alle minimum Browserversionen eintragen
+/*******************************************
+
+ Neuste  Browserversionen eintragen.
+
+*********************************************/
 
 var IEmin = '8';
 var FFmin = '10,0,1';
 var GCmin = '17,0,963';
 var Omin  = '11,62';
 
-//Aktuelle Patchversionen
+/******************************************
+
+Aktuelle Versionen der Plugins pflegen.
+
+*********************************************/
 
 var QuicktimeCURversion = '7,7,1';
 var FlashCURversion = '11,2,202,0';
@@ -711,7 +719,7 @@ var DivxCURversion = '2.2';
 var LinuxDect = '1.4.0.233';
 var JavaCURVersion = '1,6,0,31';
 
-//LinuxDect ist die aktuell erkannte Version unter Ubuntu.
+//LinuxDect ist die aktuell erkannte Version unter Linux.
 
 //Anzahl der Lücken wird gezählt
 var unpatchedPLUG = 0;
@@ -926,15 +934,16 @@ if ((unpatchedPLUG>0) | (IEbad==1) | (FFbad==1) | (GCbad==1) | (Obad==1)) {
 //Start der Überprüfung des Browser
 
 if (IEbad == 1) {
-	div.innerHTML+='So funktioniert Sicherheit nicht! Man kann sich auch Schadcode durch einen veralteten <a href="http://windows.microsoft.com/de-DE/internet-explorer/products/ie/home">Internet Explorer</a> einfangen.'; 		div.innerHTML+=LAYend;}
+	div.innerHTML+='Ihre Version des Internet Explorer ist veraltet. <a href="http://windows.microsoft.com/de-DE/internet-explorer/products/ie/home">Internet Explorer</a> einfangen.';
+	div.innerHTML+=LAYend;}
 if (FFbad == 1) {
-	div.innerHTML+='So funktioniert Sicherheit nicht! Man kann sich auch Schadcode durch einen veralteten <a href="http://www.mozilla.org/de/firefox/new/">Mozilla Firefox</a> einfangen.<br/> Tipp: Firefox anklicken dann auf "Hilfe" und "&Uuml;ber Firefox". Das Update startet (normalerweise) automatisch.';
+	div.innerHTML+='Ihre Version des Firefox ist veraltet. <a href="http://www.mozilla.org/de/firefox/new/">Mozilla Firefox</a> einfangen.<br/> Tipp: Firefox anklicken dann auf "Hilfe" und "&Uuml;ber Firefox". Das Update startet automatisch.';
 	div.innerHTML+=LAYend;}
 if (GCbad == 1) {
-	div.innerHTML+='So funktioniert Sicherheit nicht! Man kann sich auch Schadcode durch einen veralteten <a href="http://www.google.de/chrome/">Google Chrome</a> einfangen.<br/> Tipp: Schraubenschl&uuml;ssel anklicken und dann "&Uuml;ber Google Chrome". Das Update startet (normalerweise) automatisch.';
+	div.innerHTML+='Ihre Version von Google Chrome ist veraltet. <a href="http://www.google.de/chrome/">Google Chrome</a> einfangen.<br/> Tipp: Schraubenschl&uuml;ssel anklicken und dann "&Uuml;ber Google Chrome". Das Update startet (normalerweise) automatisch.';
 	div.innerHTML+=LAYend;}
 if (Obad == 1) {
-	div.innerHTML+='So funktioniert Sicherheit nicht! Man kann sich auch Schadcode durch einen veralteten <a href="http://de.opera.com/">Opera</a> einfangen.';
+	div.innerHTML+='Ihre Version von Opera ist veralteten <a href="http://de.opera.com/">Opera</a> einfangen.';
 	div.innerHTML+=LAYend;}
 
 //Start der Überprüfung der Plugins
@@ -943,7 +952,7 @@ if (unpatchedPLUG==0)  { }
 
 //UNGEPATCHTE PLUGINS vorhanden
 if (unpatchedPLUG==1) {
-	div.innerHTML+='Du kannst dir auch Schadcode durch eine veraltete Version von ';
+	div.innerHTML+='Du kannst dir auch Schadcode durch eine veraltete Version von  ';
 if (Quicktimebad==1) {
 	div.innerHTML+='<a href="http://www.apple.com/de/quicktime/download/" target="_blank">Apple Quicktime</a> einfangen.<br/> Erkannte Version: ';
 	PluginDetect.getVersion('QuickTime');
@@ -1001,9 +1010,8 @@ if (Javabad==1) {
 
 //Aufzählung von mehreren Links
 
-	else {div.innerHTML+='CHECKPOT - so geht Sicherheit nicht!  ';
+	else {div.innerHTML+='Unsichere Plugins entdeckt: ';
 	div.innerHTML+=unpatchedPLUG;
-	div.innerHTML+= ' veraltete Plugins erkannt. ';
 
 if (Quicktimebad==1) {div.innerHTML+='<a href="http://www.apple.com/de/quicktime/download/" target="_blank">Apple Quicktime</a>';}
 
