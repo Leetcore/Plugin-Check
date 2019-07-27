@@ -3,7 +3,7 @@
 Inspiriert: Mozilla Plugin Check.
 Kann: Prüft ob die erkannten Plugins der aktuellen Version entsprechen. Wenn nicht wird die Toolbar angezeigt und ein Link auf die Herstellerseite erscheint.
 Passiert auf: /* PluginDetect v0.7.4 by Eric Gerds www.pinlady.net/PluginDetect */ (Die Version könnte man auch mal updaten.
-Angepasst von: Alexander Fuchs, www.1337core.de
+Angepasst von: Alex, www.1337core.de
 Wird asynchron geladen, wirkt sich also nicht auf die seiten-ladezeit aus.
 
 !!! Achtung: Aktuelle Versionen müssen selbst gepflegt werden. !!!
